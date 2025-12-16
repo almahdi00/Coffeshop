@@ -123,6 +123,7 @@ Setelah menjalankan `db:seed`, Anda dapat login menggunakan akun berikut:
   - **Email**: `kasir@pos.com`
   - **Password**: `kasir123`
 
+## Struktur Folder
 
 `MDMart/
 ├── app/
