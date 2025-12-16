@@ -124,7 +124,7 @@ Setelah menjalankan `db:seed`, Anda dapat login menggunakan akun berikut:
   - **Password**: `kasir123`
 
 
-MDMart/
+`MDMart/
 ├── app/
 │   ├── Http/
 │   │   ├── Controllers/
@@ -186,5 +186,5 @@ MDMart/
 ├── .env                       # File konfigurasi environment (database, nama aplikasi, dll.)
 ├── composer.json              # Mendefinisikan dependensi PHP untuk proyek
 ├── package.json               # Mendefinisikan dependensi JavaScript untuk proyek
-└── vite.config.js             # File konfigurasi untuk Vite (bundler aset frontend)
+└── vite.config.js             # File konfigurasi untuk Vite (bundler aset frontend)`
 
