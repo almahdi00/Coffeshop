@@ -1,4 +1,4 @@
-# MDMart - Aplikasi Kasir (Point of Sale)
+# Coffeshop - Aplikasi Kasir (Point of Sale)
 
 
 
