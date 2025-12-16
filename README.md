@@ -123,3 +123,68 @@ Setelah menjalankan `db:seed`, Anda dapat login menggunakan akun berikut:
   - **Email**: `kasir@pos.com`
   - **Password**: `kasir123`
 
+
+MDMart/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Admin/         # Controller khusus untuk area Admin
+│   │   │   │   ├── CategoryController.php
+│   │   │   │   ├── LaporanController.php
+│   │   │   │   └── ProductController.php
+│   │   │   ├── Auth/          # Controller untuk otentikasi (login, register)
+│   │   │   └── PosController.php  # Controller utama untuk Point of Sale
+│   │   └── Middleware/
+│   │       └── RoleMiddleware.php # Middleware untuk membatasi akses berdasarkan peran
+│   ├── Models/                # Representasi tabel database (Eloquent ORM)
+│   │   ├── Category.php
+│   │   ├── Product.php
+│   │   ├── Transaction.php
+│   │   ├── TransactionDetail.php
+│   │   └── User.php
+│   └── Providers/             # Penyedia layanan (konfigurasi inti aplikasi)
+│
+├── bootstrap/                 # Skrip untuk memulai (booting) framework
+│   └── app.php                # Konfigurasi utama aplikasi, termasuk middleware
+│
+├── config/                    # Semua file konfigurasi aplikasi
+│
+├── database/
+│   ├── migrations/            # File untuk mendefinisikan skema tabel database
+│   └── seeders/               # File untuk mengisi data awal ke database
+│       ├── DatabaseSeeder.php
+│       └── ProductSeeder.php
+│
+├── public/                    # Folder yang dapat diakses langsung dari web
+│   ├── storage/               # Symlink ke storage/app/public (untuk gambar produk)
+│   └── index.php              # Titik masuk (entry point) untuk semua request
+│
+├── resources/
+│   ├── css/                   # File CSS (dikelola oleh Vite)
+│   ├── js/                    # File JavaScript (dikelola oleh Vite)
+│   └── views/                 # Semua file tampilan (Blade templates)
+│       ├── admin/             # Tampilan khusus untuk Admin
+│       │   ├── categories/
+│       │   ├── products/
+│       │   └── laporan/
+│       ├── auth/              # Tampilan untuk login, register, dll.
+│       ├── layouts/           # Template layout utama (app.blade.php, guest.blade.php)
+│       └── pos/               # Tampilan untuk Point of Sale (index.blade.php, struk.blade.php)
+│
+├── routes/                    # Definisi semua rute (URL) aplikasi
+│   ├── web.php                # Rute untuk antarmuka web
+│   └── auth.php               # Rute otentikasi yang disediakan oleh Laravel Breeze
+│
+├── storage/
+│   ├── app/
+│   │   └── public/            # Tempat penyimpanan file yang di-upload (misal: gambar produk)
+│   ├── framework/             # Cache, session, dan file-file yang dibuat framework
+│   └── logs/                  # File log aplikasi
+│
+├── vendor/                    # Folder berisi semua dependensi dari Composer (library pihak ketiga)
+│
+├── .env                       # File konfigurasi environment (database, nama aplikasi, dll.)
+├── composer.json              # Mendefinisikan dependensi PHP untuk proyek
+├── package.json               # Mendefinisikan dependensi JavaScript untuk proyek
+└── vite.config.js             # File konfigurasi untuk Vite (bundler aset frontend)
+
