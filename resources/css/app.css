@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    @apply w-full px-6 py-5 bg-white/10 border border-white/30 rounded-xl text-white placeholder-gray-400 text-lg;
+    @apply focus:outline-none focus:border-purple-400 focus:ring-4 focus:ring-purple-500/30 transition;
+}
+
+x-primary-button {
+    @apply w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold text-xl py-5 rounded-xl shadow-xl transform hover:scale-105 transition duration-300;
+}
+
+input, textarea, select {
+    color: #111827 !important;
+    background-color: #ffffff !important;
+}
+.scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+    border-radius: 3px;
+}
